@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../../theme/logo.png";
-import theme from "../../theme";
+import logo from "../../../theme/logo.png";
+import theme from "../../../theme";
 
 const Wrapper = styled.div`
   width: 100%;

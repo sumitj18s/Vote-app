@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { loadQuestions } from "../../redux/questions";
 import { loadQuestionDetails } from "../../redux/question-details";
-import Layout from "../../components/Layout";
-import Question from "../../components/Question";
+import Layout from "../../components/presentation/Layout";
+import Question from "../../components/presentation/Question";
 
 function Questions() {
   const history = useHistory();

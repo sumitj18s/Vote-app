@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { updateVote } from "../../redux/question-details";
-import Layout from "../../components/Layout";
-import RadioButton from "../../components/RadioButton";
-import Button from "../../components/Button";
+import Layout from "../../components/presentation/Layout";
+import RadioButton from "../../components/presentation/RadioButton";
+import Button from "../../components/presentation/Button";
 
 function QuestionDetailsList() {
   const questionDetails = useSelector(

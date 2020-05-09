@@ -8,20 +8,29 @@
 
 ### Important URLs:
 
-- Hosted at Netlify https://poll-heycar.netlify.app/
-- Build hook is automatic but can be manually triggered via
+- You can also refer the documentation in nice fashion at https://sumitj18s.github.io/Vote-app/
+- The app is hosted at Netlify. You can goto the URL: https://poll-heycar.netlify.app/
+- The automatic build hook of Netlify is integrated with Github. Hence, any push to Github Master branch will automatically trigger the build at Netlify and update the https://poll-heycar.netlify.app/
+- You can also manually trigger the build from command prompt.
 
 ```
 curl -X POST -d {} https://api.netlify.com/build_hooks/5eb6836b1842f5c8280a5b38
-
 ```
 
-## How to run the application
+## How to run the application in Development mode
 
 - Download the application from Github using SSH or HTTPS
 - Run `yarn install`
 - Run `yarn start`
-- It will run the app on port number
+- It will run the app on port number `3000`.
+
+## How to run the application in Production mode
+
+- Download the application from Github using SSH or HTTPS
+- Run `yarn install`
+- Run `yarn build`
+- Install a webserver say `http-server`.
+- Run the `build` folder from the `http-server`.
 
 ## Available Scripts
 
@@ -42,19 +51,12 @@ Builds the app for production to the `build` folder.<br> Your app is ready to be
 
 If you face issues or errors in `yarn start` then you can run code saved in `build` folder by copying it to any Web Server.
 
-## More info
-
-Other packages used are:
-
-- Eslint to check the code.
-- Added Rule in .eslintrc.json to exclude PropTypes: react/forbid-prop-types . Please excuse me to skip prop-types due to lack of time.
-
-## Naming Conventions
+## Other info
 
 - The name of the components should be of the format ${CONTEXT}${PURPOSE}, like UserList.js or TeamCreateEditForm.js
 - Action names should be prefixed with the name of your application, such as my-app/USER_LIST_GET_REQUESTED.
-
-## Rules
-
 - Reading state: Use reselect to create selectors, never access the state directly (only use selectors).
-- Furthermore, if we make a rule that you can only access the redux store via selector functions this will make the whole application much more maintainable and predictable, not to mention potentially faster.
+
+### Contact Me
+
+- You can reach me at Twitter https://twitter.com/sumitjolly for any questions.
