@@ -1,21 +1,27 @@
-# Scaffold app
+# Polls app
 
-## My Updates
+### Tech stack used during development
 
-### Prime tech stack
-
-- node v12.9.0
-- yarn 1.15.2
+- node v13.11.0
+- yarn 1.22.4
 - React 16.9.0
 
-## URLs:
+### Important URLs:
 
-- Hosted at Netlify (https://pollapp-heycar.netlify.app/) https://pollapp-heycar.netlify.app/
+- Hosted at Netlify https://poll-heycar.netlify.app/
 - Build hook is automatic but can be manually triggered via
 
 ```
-curl -X POST -d {} https://api.netlify.com/build_hooks/5eb5ce7aa7f7d98064800eeb
+curl -X POST -d {} https://api.netlify.com/build_hooks/5eb6836b1842f5c8280a5b38
+
 ```
+
+## How to run the application
+
+- Download the application from Github using SSH or HTTPS
+- Run `yarn install`
+- Run `yarn start`
+- It will run the app on port number
 
 ## Available Scripts
 
@@ -23,10 +29,6 @@ curl -X POST -d {} https://api.netlify.com/build_hooks/5eb5ce7aa7f7d98064800eeb
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-### `yarn test`
-
-Launches the test runner using the jest.config.js<br>
 
 ### `yarn lint`
 
@@ -44,10 +46,7 @@ If you face issues or errors in `yarn start` then you can run code saved in `bui
 
 Other packages used are:
 
-- Husky to commit the code with validations like linting.
 - Eslint to check the code.
-- Enzyme to test the components.
-- Jest for unit testing.
 - Added Rule in .eslintrc.json to exclude PropTypes: react/forbid-prop-types . Please excuse me to skip prop-types due to lack of time.
 
 ## Naming Conventions
@@ -59,12 +58,3 @@ Other packages used are:
 
 - Reading state: Use reselect to create selectors, never access the state directly (only use selectors).
 - Furthermore, if we make a rule that you can only access the redux store via selector functions this will make the whole application much more maintainable and predictable, not to mention potentially faster.
-- Side-Effectful Updates: Use mapDispatchToProps to dispatch _\_REQUESTED actions, and a side-effect handler like redux-saga to listen for these “requests”, process them, and dispatch the relevant _\_SUCCEEDED or \*\_FAILED actions, ex- Now we write a saga to listen for the action my-app/USER_LIST_GET_REQUESTED.
-- Data validation: create schema for validation.
-
-- Duck pattern
-  A module...
-  MUST export default a function called reducer()
-  MUST export its action creators as functions
-  MUST have action types in the form npm-module-or-app/reducer/ACTION_TYPE
-  MAY export its action types as UPPER_SNAKE_CASE, if an external reducer needs to listen for them, or if it is a published reusable library
